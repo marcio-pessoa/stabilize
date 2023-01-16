@@ -60,12 +60,11 @@ float Stabilize::sample(float value) {
     _result = value;
     _samples_counter = 0;
   }
+  _samples_counter++;
 
   if (abs(value - _result) >= _threshold) {
     _result = value;
   }
-
-  _samples_counter++;
 
   return _result;
 }
