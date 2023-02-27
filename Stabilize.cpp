@@ -2,8 +2,8 @@
  *
  */
 
-#include "Arduino.h"
 #include "Stabilize.h"
+#include "Arduino.h"
 
 /* Stabilize
  *
@@ -18,7 +18,8 @@
  * Returns
  *   void
  */
-Stabilize::Stabilize() {
+Stabilize::Stabilize(int samples, float threshold) {
+  begin(samples, threshold);
 }
 
 /* begin
